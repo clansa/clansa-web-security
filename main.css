@@ -1,0 +1,486 @@
+.homepage-overall{
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    padding-bottom: 5rem;  /* add this */
+}
+.header-section{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 80px 80px;
+    padding-bottom: 2rem;
+}
+
+.header-section-left img {
+    width:115px;
+    height: 100px;
+}
+.header-section-middle{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+
+}
+.header-section-middle p {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Outfit', monospace;
+    font-weight: lighter;
+}
+
+.header-section-right {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-section-right button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Intel One Mono', monospace;
+}
+
+
+
+.header-section-left-button {
+    background-color: #ffffff;
+    color: #000000 !important;
+}
+
+.header-section-left-button:hover {
+background-color: #e0e0e0;
+cursor: pointer;
+}
+
+.header-section-right-button {
+    background-color: #000000;
+}
+
+.header-section-right-button:hover {
+    cursor: pointer;
+    color: #e0e0e0 !important;
+}
+
+.divider-header-hero {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    height: 1px;
+    margin-top: 0;
+}
+
+.divider-hero-bottom {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    height: 1px;
+}
+
+.hero-overall {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-highlights {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    gap: 17px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.highlight1 {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    border: 1px solid #372C00;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.highlight1:hover {
+    cursor: pointer;
+    color: #ffffff !important;
+    border: 1px solid #6d5700;
+}
+
+.highlight2 {
+    display: flex;
+    width: 290px;
+    height: 40px;
+    border: 1px solid #372C00;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.highlight2:hover {
+    cursor: pointer;
+    color: #ffffff !important;
+    border: 1px solid #6d5700;
+}
+
+
+.highlight3 {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    border: 1px solid #6d5700;
+    background-color: #1A1A00 ;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.highlight3:hover {
+    cursor: pointer;
+    color: #ffffff !important;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    transition: background-color 0.3s ease;
+    
+}
+
+.highlight1:hover p,
+.highlight2:hover p,
+.highlight3:hover p {
+color: #ffffff !important;
+transition: color 0.3s ease;
+}
+
+.highlight1 p, .highlight2 p, .highlight3 p {
+color: #ffffff;
+font-size: 12px;
+font-family: 'Outfit';
+}
+
+
+
+
+.title-desc-buttons h1 {
+color:#ffffff;
+text-align: center;
+font-family: 'JetBrains Mono', monospace;
+font-weight: 500;
+padding-top: 0.6rem;
+}
+
+.title-desc-buttons p {
+color: #b9b9b9;
+text-align: center;
+font-family: 'Source Sans 3', sans-serif;
+letter-spacing: 1.5px;
+font-weight: 100;
+line-height: 1.5;
+font-weight: 400;
+}
+
+
+.hero-buttons {
+display: flex;
+flex-direction: row;
+gap: 21px;
+justify-content: center;
+width: 100%;
+margin-top: 25px;
+    
+}
+
+.hero-buttons-left {
+background-color: none;
+border-radius: 10px;
+background-color: #000000;
+color: #ffffff;
+border: 1px solid #ffffff;
+padding: 11px;
+padding-left: 20px;
+padding-right: 20px;
+font-family: 'JetBrains Mono', monospace;
+letter-spacing: 0.5px;
+font-size: 16px;
+    
+}
+
+.hero-buttons-right {
+background-color: none;
+border-radius: 10px;
+background-color: #ffffff;
+color: #000000;
+padding: 11px;
+font-family: 'JetBrains Mono', monospace;
+letter-spacing: 0.5px;
+font-size: 16px;
+font-weight: bold;
+}
+
+
+.hero-buttons-left:hover {
+cursor: pointer;
+border: 1px solid #e0e0e0;
+color: #e0e0e0 !important;
+}
+
+.hero-buttons-right:hover {
+background-color: #000000;
+color: #ffffff !important;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+
+.divider-hero-bottom, .inside-price, .pricing-testimonials, .testimonials-footer {
+width: 90%;
+background-color: rgba(255, 255, 255, 0.041);
+border: none;
+height: 1px;
+margin-top: 60px;
+}
+
+.testimonials-footer {
+margin-top: 7rem;
+}
+
+.stats-overall {
+width: 100%;
+display: flex;
+flex-direction: row;
+gap: 50px;
+justify-content: center;
+font-family: 'JetBrains Mono', monospace;
+letter-spacing: 0.5px;
+margin-top: 2rem;
+margin-bottom: 2rem;
+}
+
+.stat-page-of-notes {
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.stat-core-modules {
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.stat-core-content {
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.stat-premium-deep-dives {
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.stats-overall p {
+margin: 0;
+padding-top: 0.6rem;
+}
+
+.divider-stats-bottom {
+width: 90%;
+background-color: rgba(255, 255, 255, 0.041);
+border: none;
+height: 1px;
+}
+
+
+.titlewhatsinside, .title-pricing {
+font-family: 'Intel One Mono', monospace;
+color: #7B7B7B;
+font-weight: lighter;
+font-size: 20px;
+margin-top: 40px;
+font-size: 26px;
+text-align: center;
+}
+
+
+
+.whatsinside {
+width: 75%;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+margin: 0 auto;
+gap: 30px;
+margin-top: 2.5rem;
+}
+
+
+.fundamentals, .internals, .network, .redteam {
+display: flex;
+flex-direction: column;
+background-color: #020202;
+border: 0.1px solid #ffc40018;
+border-radius: 25px;
+padding: 1rem 1rem 2.5rem;
+height: 135px;
+margin: 0;
+justify-content: center;
+width: auto;
+}
+
+.redteam {
+grid-column: 2 / 3;
+}
+
+
+.fundamentals p, .internals p, .network p, .redteam p {
+font-family: 'JetBrains Mono', monospace;
+padding-left: 0.5rem;
+color: #ffffff;
+margin: 0;
+padding-top: 0.5rem;
+}
+
+
+.pricing-overall {
+width: 90%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 40px;
+margin: 0 auto;
+margin-top: 2.5rem;
+}
+
+
+.free-plan, .the-vault-plan {
+display: flex;
+flex-direction: column;
+width: 26%;
+background-color: #151515 ;
+border-radius: 25px;
+padding-left: 2rem;
+}
+
+.free-plan {
+justify-content: center;
+}
+
+.free-plan {
+border: 1px solid #5C5C5C;
+}
+
+.the-vault-plan {
+display: flex;
+border: 1px solid #FFC300;
+padding-top: 1rem;
+justify-content: center;
+}
+
+.free-plan p, .the-vault-plan p {
+font-family: 'Intel One Mono', monospace;
+margin: 0;
+padding-top: 1rem;
+}
+
+.the-vault-cta-button {
+width: 200px;
+height: 45px;
+border-radius: 15px;
+border: none;
+background-color: #ffffff;
+color: #000000;
+font-family: 'Intel One Mono', monospace;
+font-size:18px;
+font-weight: 500;
+margin-top: 1.5rem;
+margin-bottom: 1.9rem;
+}
+
+.the-vault-cta-button:hover {
+background-color: #000000;
+color: #ffffff !important;
+transition: background-color 0.3s ease;
+cursor: pointer;
+}
+
+
+.testimonials {
+width: 90%;
+margin: 0 auto;
+}
+
+.testimonials h2 {
+font-family: 'Intel One Mono', monospace;
+color: #7B7B7B;
+font-weight: lighter;
+margin-left: 0;
+font-size: 20px;
+margin-top: 2.5rem;
+margin-bottom: 35px;
+font-size: 26px;
+text-align: center;
+}
+
+
+.review-card {
+border-left: 2px solid #FFC300;
+padding-left: 1rem;
+
+}
+
+
+.review-card p {
+color: #979797;
+font-family: 'Outfit';
+letter-spacing: 1.4px;
+font-size: 18px;
+}
+
+
+.footer {
+display: flex; 
+flex-direction: row; 
+margin-top: 7rem; 
+width: 100%; 
+justify-content: center;
+gap: 6rem;
+font-family: 'Outfit', monospace;
+}
+
+.footer-DOC, .footer-BLOG, .footer-TheVault, .footer-ABOUT {
+display: flex; 
+flex-direction: column;
+}
+
+.footer h1 {
+color: #ffffff;
+margin: 0;
+padding-bottom: 0;
+}
+
+.footer p {
+color: #999999;
+margin: 0;
+padding-top: 1rem;    /* small consistent gap between links */
+}
+
+
+body {
+margin: 0;
+padding: 0;
+}
