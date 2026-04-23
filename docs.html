@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Docs</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+    <style>
+        .docs-overall {
+        width: 100%;
+        height: auto;
+        background-color: #000000;
+        padding-bottom: 5rem;  /* add this */
+        }
+
+        .docs-section {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .docs-section h1 {
+            color: #ffffff;
+            margin-left: 5.5rem;
+            font-family: 'Intel One Mono', monospace;
+            font-size: 32px;
+            margin-top: 2rem;
+        }
+
+
+        .sidebar-notes-search-section {
+            width: 90%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+        }
+
+        .sidebar-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-section p {
+            color: #8d8d8d;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: lighter;
+        }
+
+
+        .sidebar-title {
+    cursor: pointer;
+    color: #ffffff;
+    padding: 6px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+}
+
+.sidebar-links {
+    padding-left: 12px;
+    margin-bottom: 8px;
+}
+
+.sidebar-links p {
+    color: #666;
+    font-size: 13px;
+    padding: 3px 0;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.sidebar-links p.active {
+    color: #ffffff;
+    background-color: #1a1a1a;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.sidebar-links p:hover {
+    color: #ffffff;
+}
+
+    </style>
+</head>
+<body>
+
+    <main class="docs-overall">
+        <div id="header"></div>
+
+        <section class="docs-section">
+            <h1>DOCS</h1>
+
+            <div class="sidebar-notes-search-section">
+                <div class="sidebar-section">
+                    <p>Check the chronological order for learning ></p>
+                    
+                    <div class="sidebar-title" onclick="toggleSection(this)">
+                        Fundamentals <span class="arrow">↓</span>
+                    </div>
+                    <div class="sidebar-links">
+                        <p class="active">OSI Model</p>
+                        <p>DNS</p>
+                        <p>TCP</p>
+                    </div>
+            
+                    <div class="sidebar-title" onclick="toggleSection(this)">
+                        Web Internals <span class="arrow">›</span>
+                    </div>
+                    <div class="sidebar-links" style="display:none;">
+                        <p>Coming soon</p>
+                    </div>
+            
+                    <div class="sidebar-title" onclick="toggleSection(this)">
+                        Network & Services <span class="arrow">›</span>
+                    </div>
+                    <div class="sidebar-links" style="display:none;">
+                        <p>Coming soon</p>
+                    </div>
+            
+                    <div class="sidebar-title" onclick="toggleSection(this)">
+                        Redteam Tactics <span class="arrow">›</span>
+                    </div>
+                    <div class="sidebar-links" style="display:none;">
+                        <p>Coming soon</p>
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+
+    <div class="interlude-left-line" style="width: 1.5px; height: 300px; background-color: #666; border-radius: 20px;"></div>
+
+
+
+
+
+        <div id="footer"></div>
+
+
+
+
+
+    </main>
+
+
+
+<script>
+    function toggleSection(element) {
+    const links = element.nextElementSibling;
+    const arrow = element.querySelector('.arrow');
+    
+    if (links.style.display === 'none') {
+        links.style.display = 'block';
+        arrow.textContent = '↓';
+    } else {
+        links.style.display = 'none';
+        arrow.textContent = '›';
+    }
+}
+</script>
+
+    
+    <script>
+        async function loadSection(id, file) {
+            const res = await fetch(file);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+    
+        loadSection('header', 'header.html');
+        loadSection('hero', 'hero.html');
+        loadSection('stats', 'stats.html');
+        loadSection('pricing', 'pricing.html');
+        loadSection('whatsinside', 'whatsinside.html');
+        loadSection('testimonials', 'testimonials.html');
+        loadSection('footer', 'footer.html');
+    </script>
+</body>
+</html>
