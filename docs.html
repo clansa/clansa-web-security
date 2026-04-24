@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src='main.js'></script>
     <style>
         .docs-overall {
@@ -18,20 +19,21 @@
         height: auto;
         background-color: #000000;
         padding-bottom: 5rem;  /* add this */
+        justify-content: center;
         }
 
         .docs-section {
             width: 90%;
             display: flex;
             flex-direction: column;
+            margin: 0 auto;
+            margin-top: 4rem;
         }
 
         .docs-section h1 {
             color: #ffffff;
-            margin-left: 5.5rem;
             font-family: 'Intel One Mono', monospace;
             font-size: 32px;
-            margin-top: 2rem;
         }
 
 
@@ -41,11 +43,13 @@
             display: flex;
             flex-direction: row;
             margin: 0 auto;
+            gap: 3rem;
         }
 
         .sidebar-section {
             display: flex;
             flex-direction: column;
+            width: 15%;
         }
 
         .sidebar-section p {
@@ -58,24 +62,37 @@
 
         .sidebar-title {
     cursor: pointer;
-    color: #ffffff;
+    color: #666666;
     padding: 6px 0;
     font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
 }
+
+
+.sidebar-title:hover {
+    color: #ffffff;
+}
+
+.sidebar-title.active {
+    color: #ffffff;
+}
+
 
 .sidebar-links {
     padding-left: 12px;
     margin-bottom: 8px;
 }
 
+
 .sidebar-links p {
     color: #666;
-    font-size: 13px;
+    font-size: 16px;
     padding: 3px 0;
     cursor: pointer;
     font-family: 'JetBrains Mono', monospace;
 }
+
+
 
 .sidebar-links p.active {
     color: #ffffff;
@@ -88,6 +105,130 @@
     color: #ffffff;
 }
 
+
+.notes-section-middle {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-field-readtime {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.CFR-calendar, .CFR-field, .CFR-seperator, .CFR-readtime {
+    color: #434343;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.topic-title {
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.topic-title p {
+    margin: 0;
+    margin-top: 1.5rem;
+}
+
+
+.topic-explanation p {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.topic-explanation {
+    color: #5E5E5E;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+
+.why-it-matters {
+    background-color: #ffc40036;
+    width: 70%;
+    padding-left: 1rem;
+    border-radius: 7px;
+    border-left: 3px solid #FFAC38;
+
+}
+
+.WIM-explanation {
+    font-family: 'Intel One Mono', monospace;
+    color: #5E5E5E;
+}
+
+.right-sidebar-search-section {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-family: 'Intel One Mono', monospace;
+    width: 12%;
+}
+.right-sidebar-search-section p {
+    margin: 0;
+    padding-top: 12px;
+    color: #666;
+    cursor: pointer;
+}
+
+.right-sidebar-search-section p:hover {
+    color: #FFC300;
+}
+
+.right-sidebar-search-section h3 {
+    margin: 0;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+
+
+
+.searchbar-container {
+    display: flex;
+    align-items: center;
+    background-color: #111111;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 8px 14px;
+    width: auto;
+    gap: 8px;
+    margin-bottom: 2rem;
+}
+
+
+.searchbar-container:focus-within {
+    border-color: #474747;
+}
+
+
+.searchbar {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    width: 100%;
+}
+
+.searchbar::placeholder {
+    color: #444;
+}
+
+.search-icon {
+    color: #444;
+    font-size: 18px;
+}
+
     </style>
 </head>
 <body>
@@ -96,13 +237,14 @@
         <div id="header"></div>
 
         <section class="docs-section">
-            <h1>DOCS</h1>
+            
 
             <div class="sidebar-notes-search-section">
                 <div class="sidebar-section">
+                    <h1>DOCS</h1>
                     <p>Check the chronological order for learning ></p>
                     
-                    <div class="sidebar-title" onclick="toggleSection(this)">
+                    <div class="sidebar-title active" onclick="toggleSection(this)">
                         Fundamentals <span class="arrow">↓</span>
                     </div>
                     <div class="sidebar-links">
@@ -133,21 +275,56 @@
                     </div>
             
                 </div>
+                <div class="interlude-left-line" style="width: 1px; height: 600px; background-color: #474747; border-radius: 20px;"></div>
+
+                <div class="notes-section-middle">
+                    <div class="calendar-field-readtime">
+                        <p class="CFR-calendar">04-19-2026</p>
+                        <p class="CFR-seperator">•</p>
+                        <p class="CFR-field">Fundamentals</p>
+                        <p class="CFR-seperator">•</p>
+                        <p class="CFR-readtime">~12 min read</p>
+                    </div>
+
+                    <div class="topic-title">
+                        <p>Web Fundamentals - OSI Model</p>
+                    </div>
+
+                    <div class="topic-explanation">
+                        <p>The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes 
+                            how different network systems communicate. It breaks communication into 7 layers, each with 
+                            a specific job.</p>
+                    </div>
+
+
+                    <div class="why-it-matters">
+                        <p class="WIM-explanation"><span style="color: #FFAC38;">Why it matters?:</span> Every attack, every protocol, every<br>
+                             packet travels through these layers. Understanding
+                             which layer you're operating on is fundamental to
+                             understanding how exploits work.
+                    </div>
+                </div>
+
+                <div class="interlude-left-line" style="width: 1px; align-self: stretch; height: auto; background-color: #474747; border-radius: 20px;"></div>
+                
+                <div class="right-sidebar-search-section">
+                    <div class="searchbar-container">
+                        <input type="text" class="searchbar" placeholder="Search docs...">
+                        <span class="search-icon">⌕</span>
+                    </div>
+                    <h3>ON THIS PAGE</h3>
+                    <p>Layer #7</p>
+                    <p>Layer #6</p>
+                    <p>Layer #5</p>
+                    <p>Layer #4</p>
+                    <p>Layer #3</p>
+                    <p>Layer #2</p>
+                    <p>Layer #1</p>
+                    <p># Packet Structure</p>
+                </div>
             </div>
         </section>
-
-    <div class="interlude-left-line" style="width: 1.5px; height: 300px; background-color: #666; border-radius: 20px;"></div>
-
-
-
-
-
         <div id="footer"></div>
-
-
-
-
-
     </main>
 
 
@@ -176,11 +353,6 @@
         }
     
         loadSection('header', 'header.html');
-        loadSection('hero', 'hero.html');
-        loadSection('stats', 'stats.html');
-        loadSection('pricing', 'pricing.html');
-        loadSection('whatsinside', 'whatsinside.html');
-        loadSection('testimonials', 'testimonials.html');
         loadSection('footer', 'footer.html');
     </script>
 </body>

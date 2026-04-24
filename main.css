@@ -18,6 +18,31 @@
     padding-bottom: 2rem;
 }
 
+.header-section-middle a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-section-middle a p {
+    position: relative;
+    display: inline-block;
+}
+
+.header-section-middle a p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.header-section-middle a p:hover::after {
+    width: 100%;
+}
+
 .header-section-left img {
     width:115px;
     height: 100px;
