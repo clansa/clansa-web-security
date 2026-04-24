@@ -37,7 +37,7 @@
         }
 
         .vault-info h1 {
-            color: #ffffff;
+            color: #ffffffde;
             font-family: 'Intel One Mono', monospace;
             text-align: center;
         }
@@ -45,16 +45,26 @@
         .CTA-get-started-button {
             display: flex;
             width: fit-content;
-            border: 1px solid #ffffff;
+            border: 1px solid #d8d8d8;
             border-radius: 11px;
             background-color: transparent;
-            color: #ffffff;
+            color: #d8d8d8;
             font-family: 'Intel One Mono', monospace;
             font-weight: 500;
             font-size: 18px;
             padding: 7px 20px;
             margin: 0 auto;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+
         }
+
+        .CTA-get-started-button:hover {
+            background-color: #ffffff; 
+            color: #000000;
+            border-color: #ffffff;
+        }
+
 
         .thevault-whats-included {
             display: flex;
@@ -150,7 +160,7 @@ font-size: 18px;
         </div>
 
         <div class="thevault-whats-included">
-            <h1>What's Included</h1>
+            <h1 style="color: #ffffff;">What's Included</h1>
             <div class="thevault-whats-inside-faq">
                 <div class="vaultwhats-inside">
                     <h3>WHAT'S INSIDE?</h3>
