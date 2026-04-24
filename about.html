@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Clansa Web Security</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+
+    <style>
+        .about {
+            width: 100%;
+            height: auto;
+            background-color: black;
+        }
+
+        .about-section {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .about-section h1 {
+            color: #ffffff; 
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: lighter;
+        }
+
+        .title h3 {
+            color: #ffffff; 
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .ABOUTtitle-answer {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ABOUTanswer p {
+            color: #979797; 
+            font-family: 'Inter', sans-serif;
+        }
+
+        .about-logo {
+            width: 5rem;
+            height: 4.5rem;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+
+
+
+<body>
+<section class="about">
+    <div id="header"></div>
+
+    <div class="about-section">
+        <h1>About Clansa Web Security</h1>
+        <div class="ABOUTtitle-answer">
+            <div class="title">
+                <h3><i>Origin story</i></h3>
+            </div>
+            <div class="ABOUTanswer">
+                <p>I'm an 18-year-old who got into cybersecurity the hard way — jumping between YouTube videos, outdated blog posts, 
+                    and courses that taught me enough to pass a quiz but not enough to actually understand anything. So I started writing 
+                    my own notes. Not summaries, not cheat sheets — actual deep explanations of how things work at the protocol level. 800 
+                    pages later, Clansa Web Security exists.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="ABOUTtitle-answer">
+            <div class="title">
+                <h3><i>What this site is</i></h3>
+            </div>
+            <div class="ABOUTanswer">
+                <p>This site is built around one idea: most people learn cybersecurity at the surface level and wonder why nothing clicks. 
+                    The free docs here cover the fundamentals that every other resource skips or oversimplifies — OSI, DNS internals, TCP, 
+                    how browsers actually work. The Vault goes deeper, into the offensive side. No fluff, no hand-holding, no "cybersecurity 
+                    in 10 minutes" energy.
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="ABOUTtitle-answer">
+            <div class="title">
+                <h3><i>Who it's for</i></h3>
+            </div>
+            <div class="ABOUTanswer">
+                <p>If you're a complete beginner who wants to actually understand networking before touching a single tool — start with the free docs. 
+                    If you already know the basics and want to learn how to break things properly — The Vault is for you. 
+                    If you're looking for a certificate prep course, this isn't it.
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="ABOUTtitle-answer">
+            <div class="title">
+                <h3><i>Contact/community</i></h3>
+            </div>
+            <div class="ABOUTanswer">
+                <p>I'm one person building this. If something is wrong, unclear, or you want to suggest a topic — reach out. 
+                    The best place to find me is [your Discord/Twitter/email here]. I read everything.
+                </p>
+            </div>
+        </div>
+
+
+
+        <img src="LogoCWS.webp" class="about-logo">
+
+    </div>
+
+
+
+    <div id="footer"></div>
+</section>
+
+
+<script>
+    async function loadSection(id, file) {
+        const res = await fetch(file);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection('header', 'header.html');
+    loadSection('footer', 'footer.html');
+</script>
+
+
+</body>
+</html>
