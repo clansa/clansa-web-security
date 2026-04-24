@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Clansa Web Security</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+
+    <style>
+        .vault-overall {
+            width: 100%;
+            height: auto;
+            background-color: #000000;
+        }
+
+
+        .title-CTA-button {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .vault-info {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
+            padding: 0;
+            gap: 5rem;
+        }
+
+        .vault-info h1 {
+            color: #ffffff;
+            font-family: 'Intel One Mono', monospace;
+            text-align: center;
+        }
+        
+        .CTA-get-started-button {
+            display: flex;
+            width: fit-content;
+            border: 1px solid #ffffff;
+            border-radius: 11px;
+            background-color: transparent;
+            color: #ffffff;
+            font-family: 'Intel One Mono', monospace;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 7px 20px;
+            margin: 0 auto;
+        }
+
+        .thevault-whats-included {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .thevault-whats-included h1 {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .thevault-whats-inside-faq {
+            width: 60%;
+            height: auto;
+            border: 1px solid #FFC300;
+            margin: 0 auto;
+            padding: 2rem 2rem;
+            border-radius: 16px;
+        }
+
+        .vaultwhats-inside, .thevault-FAQ {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vaultwhats-inside h3, .thevault-FAQ h3 {
+            color: #9C9C9C;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: lighter;
+            
+        }
+
+        .artice p, .thevault-question p {
+            color: #ffffff;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .article-explained p, .thevault-answer p {
+            color: #979797;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: lighter;
+            font-size: 15px;
+        }
+
+
+        .thevault-testimonials {
+width: 90%;
+margin: 0 auto;
+}
+
+.thevault-testimonials h2 {
+font-family: 'Intel One Mono', monospace;
+color: #7B7B7B;
+font-weight: lighter;
+margin-left: 0;
+font-size: 20px;
+margin-top: 2.5rem;
+margin-bottom: 35px;
+font-size: 26px;
+}
+
+
+.thevault-review-card {
+border-left: 2px solid #FFC300;
+padding-left: 1rem;
+
+}
+
+
+.thevault-review-card p {
+color: #979797;
+font-family: 'Outfit';
+letter-spacing: 1.4px;
+font-size: 18px;
+}
+
+        
+    </style>
+</head>
+<body>
+
+
+<main class="vault-overall">
+    <div id="header"></div>
+
+    <section class="vault-info">
+        <div class="title-CTA-button">
+            <h1>The free docs teach you how things work.<br> 
+                <span style="color: #FFC300;">The Vault</span> teaches you how to break them
+            </h1>
+            <button class="CTA-get-started-button">Get Started - $13,99/mo</button>
+        </div>
+
+        <div class="thevault-whats-included">
+            <h1>What's Included</h1>
+            <div class="thevault-whats-inside-faq">
+                <div class="vaultwhats-inside">
+                    <h3>WHAT'S INSIDE?</h3>
+                    <div class="content">
+                        <div class="artice">
+                            <p>- Red Team Tactics — Recon, enumeration, privilege escalation</p>
+                        </div>
+                        <div class="article-explained">
+                            <p>You don't hack systems by guessing. You follow a methodology. This module covers how real attackers think — 
+                                passive and active recon, enumerating services without triggering alerts, and escalating from a low-privilege 
+                                shell to root. No CTF shortcuts, actual technique.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="content">
+                        <div class="artice">
+                            <p>- CTF Writeups — Step-by-step breakdowns of real machines</p>
+                        </div>
+                        <div class="article-explained">
+                            <p>Every writeup walks through the full attack chain — what I tried, what failed, and why the working approach worked. 
+                                The goal isn't to hand you flags, it's to build the mental model so you can solve the next box yourself. HackTheBox 
+                                and TryHackMe machines covered.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="content">
+                        <div class="artice">
+                            <p>- Network Exploitation — ARP poisoning, MITM, packet crafting</p>
+                        </div>
+                        <div class="article-explained">
+                            <p>Most people learn networking to pass a certificate. This module teaches it so you can manipulate it. 
+                                Covers ARP cache poisoning, intercepting traffic between two hosts, crafting raw packets with Scapy, 
+                                and understanding exactly why these attacks work at the protocol level.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="content">
+                        <div class="artice">
+                            <p>- New module every month</p>
+                        </div>
+                    </div>
+
+
+                    <hr class="content-faq-seperator" style="width: 90%; margin: 0 auto; border: none; height: 1px; background-color: rgba(255, 255, 255, 0.1); margin-top: 2rem; margin-bottom: 2rem;">
+
+                <div class="thevault-FAQ">
+                    <h3>FAQs</h3>
+                    <div class="qa">
+                        <div class="thevault-question">
+                            <p>Can I cancel anytime?</p>
+                        </div>
+                        <div class="thevault-answer">
+                            <p>Yes, cancel anytime from your account settings. No questions asked.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="qa">
+                        <div class="thevault-question">
+                            <p>Is this for beginners?</p>
+                        </div>
+                        <div class="thevault-answer">
+                            <p>You need the fundamentals first — Vault is for the next level.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="qa">
+                        <div class="thevault-question">
+                            <p>How often is new content added?</p>
+                        </div>
+                        <div class="thevault-answer">
+                            <p>Monthly</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="thevault-members-say">
+            <section class="thevault-testimonials">
+                <h2>What <span style="color: #FFC300;">THE VAULT</span> Members Say</h2>
+                <div class="thevault-review-card">
+                    <p>"Finally a resource that doesn't treat me like an idiot. The OSI model section<br>
+                        alone explained things no YouTube video ever did."</p>
+                    <p>- Mehmet K., CS Student</p>
+                </div>
+            
+                <div class="thevault-review-card" style="margin-top: 2.5rem;">
+                    <p>"The TCP internals notes are the most detailed beginner-friendly<br>
+                        breakdown I've found anywhere."</p>
+                    <p>— Anonymous member</p>
+                </div>
+            </section>
+            <hr class="testimonials-footer">
+        </div>
+        <div id="footer"></div>
+
+    </section>
+
+</main>
+
+
+
+
+
+<script>
+    async function loadSection(id, file) {
+        const res = await fetch(file);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection('header', 'header.html');
+    loadSection('footer', 'footer.html');
+</script>
+
+
+</body>
+</html>
