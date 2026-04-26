@@ -505,6 +505,99 @@ padding-top: 1rem;    /* small consistent gap between links */
 }
 
 
+#note-content h1 {
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 1.5rem 0 0.5rem;
+} /* hide since you have topic-title already */
+#note-content h2 {
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1e1e1e;
+}
+#note-content h3 {
+    color: #cccccc;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+#note-content p {
+    color: #5e5e5e;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0.5rem 0;
+}
+#note-content code {
+    background-color: #1a1a1a;
+    color: #FFC300;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+#note-content pre {
+    background-color: #111111;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+#note-content pre code {
+    background: none;
+    padding: 0;
+    color: #e0e0e0;
+}
+#note-content blockquote {
+    border-left: 3px solid #FFAC38;
+    background-color: #ffc40018;
+    padding: 0.8rem 1rem;
+    border-radius: 0 7px 7px 0;
+    margin: 1rem 0;
+}
+#note-content blockquote p {
+    color: #5e5e5e;
+    margin: 0;
+}
+#note-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    margin: 1rem 0;
+}
+#note-content th {
+    color: #ffffff;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 8px 12px;
+    text-align: left;
+}
+#note-content td {
+    color: #5e5e5e;
+    border-bottom: 1px solid #1a1a1a;
+    padding: 8px 12px;
+}
+#note-content hr {
+    border: none;
+    border-top: 1px solid #1e1e1e;
+    margin: 2rem 0;
+}
+#note-content ul, #note-content ol {
+    color: #5e5e5e;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    padding-left: 1.5rem;
+}
+
 body {
 margin: 0;
 padding: 0;

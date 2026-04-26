@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src='main.js'></script>
     <style>
         .docs-overall {
@@ -47,10 +48,15 @@
         }
 
         .sidebar-section {
-            display: flex;
-            flex-direction: column;
-            width: 15%;
-        }
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+    max-height: 100vh;
+    overflow-y: auto;
+}
 
         .sidebar-section p {
             color: #8d8d8d;
@@ -170,6 +176,13 @@
     color: #ffffff;
     font-family: 'Intel One Mono', monospace;
     width: 12%;
+    display: flex;
+    flex-direction: column;
+    width: 12%;
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+    
 }
 .right-sidebar-search-section p {
     margin: 0;
@@ -248,9 +261,9 @@
                         Fundamentals <span class="arrow">↓</span>
                     </div>
                     <div class="sidebar-links">
-                        <p class="active">OSI Model</p>
-                        <p>DNS</p>
-                        <p>TCP</p>
+                        <p class="active" onclick="loadNote('notes/osi-model.md', this)">OSI Model</p>
+                        <p onclick="loadNote('notes/dns.md', this)">DNS</p>
+                        <p onclick="loadNote('notes/tcp.md', this)">TCP</p>
                     </div>
             
                     <div class="sidebar-title" onclick="toggleSection(this)">
@@ -275,7 +288,7 @@
                     </div>
             
                 </div>
-                <div class="interlude-left-line" style="width: 1px; height: 600px; background-color: #474747; border-radius: 20px;"></div>
+                <div class="interlude-left-line" style="width: 1px; align-self: stretch; height: auto; background-color: #474747; border-radius: 20px;"></div>
 
                 <div class="notes-section-middle">
                     <div class="calendar-field-readtime">
@@ -286,23 +299,7 @@
                         <p class="CFR-readtime">~12 min read</p>
                     </div>
 
-                    <div class="topic-title">
-                        <p>Web Fundamentals - OSI Model</p>
-                    </div>
-
-                    <div class="topic-explanation">
-                        <p>The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes 
-                            how different network systems communicate. It breaks communication into 7 layers, each with 
-                            a specific job.</p>
-                    </div>
-
-
-                    <div class="why-it-matters">
-                        <p class="WIM-explanation"><span style="color: #FFAC38;">Why it matters?:</span> Every attack, every protocol, every<br>
-                             packet travels through these layers. Understanding
-                             which layer you're operating on is fundamental to
-                             understanding how exploits work.
-                    </div>
+                    <div id="note-content"></div>  <!-- your markdown renders here -->
                 </div>
 
                 <div class="interlude-left-line" style="width: 1px; align-self: stretch; height: auto; background-color: #474747; border-radius: 20px;"></div>
@@ -354,6 +351,34 @@
     
         loadSection('header', 'header.html');
         loadSection('footer', 'footer.html');
+    </script>
+
+    <script>
+        fetch('notes/dns.md')
+    .then(res => res.text())
+    .then(text => {
+        document.getElementById('note-content').innerHTML = marked.parse(text);
+    })
+    .catch(err => console.error('Failed to load note:', err));
+    </script>
+
+    <script>
+        function loadNote(file, clickedEl) {
+    // update active state
+    document.querySelectorAll('.sidebar-links p').forEach(p => p.classList.remove('active'));
+    clickedEl.classList.add('active');
+
+    // fetch and render the note
+    fetch(file)
+        .then(res => res.text())
+        .then(text => {
+            document.getElementById('note-content').innerHTML = marked.parse(text);
+        })
+        .catch(err => console.error('Failed to load note:', err));
+}
+
+// load default note on page open
+loadNote('notes/osi-model.md', document.querySelector('.sidebar-links p.active'));
     </script>
 </body>
 </html>
